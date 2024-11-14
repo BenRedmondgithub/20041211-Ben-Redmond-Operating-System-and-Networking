@@ -2,10 +2,10 @@
 
 int main() {
 
-FILE *file;
+FILE *fptr;
 
 fptr = fopen("data.txt","w");
-if (FILE == NULL)
+if (fptr == NULL)
 {
     printf ("Error opening the file for writing!\n");
     return 1;
@@ -13,16 +13,23 @@ if (FILE == NULL)
 
 fprintf(fptr, "Hello, Operating System!\n");
 
-fptr = fopen ("filename.txt","r");
+fclose (fptr);
+
+fptr = fopen ("data.txt","r");
+if(fptr == NULL) {
+    printf("Error reading this file");
+    return 1;
+}
 
 char ch;
 printf("contents of the file:\n");
-while ((ch = fgetc(fprt)) != EOF)
+while ((ch = fgetc(fptr)) != EOF)
 {
     putchar(ch);
 }
 
-fclose(fprt);
+fclose(fptr);
 
 return 0;
+
 }
