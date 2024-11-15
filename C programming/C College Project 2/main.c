@@ -22,9 +22,9 @@ if (index < 0 || index > 9) {
     return 1;
 }
 
-printf ("")
+printf ("The value of index %d is: %d\n", index array[index]);
 
-printf ("")
+printf ("The memory address of array [%d] is: %p\n", input (void*)&array[index]);
 
 
 return 0;
